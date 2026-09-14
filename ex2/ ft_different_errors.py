@@ -10,6 +10,7 @@ def garden_operations(operation_number: int):
     else:
         return
 
+
 def test_error_types(operation_number: int) -> None:
     try:
         garden_operations(operation_number)
@@ -24,6 +25,7 @@ def test_error_types(operation_number: int) -> None:
     if operation_number > 3:
         print("Operation completed successfully")
 
+
 def ft_different_errors():
     print("=== Garden Error Types Demo ===")
     print("Testing operation 0...")
@@ -37,6 +39,7 @@ def ft_different_errors():
     print("Testing operation 4...")
     test_error_types(4)
     print("\nAll error types tested successfully!")
+
 
 if __name__ == "__main__":
     ft_different_errors()

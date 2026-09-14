@@ -7,13 +7,15 @@ def input_temperature(temp_input: str) -> int:
     elif (temperature < 0):
         raise ValueError(f'{temperature}°C is too cold for plants (min 0°C)')
 
+
 def test_temperature(temp_input: str) -> None:
     try:
         print(f"Input data is '{temp_input}'")
         temperature = input_temperature(temp_input)
         print(f"Temperature is now {temperature}°C\n")
     except ValueError as error:
-         print(f"Caught input_temperature error: {error}\n")
+        print(f"Caught input_temperature error: {error}\n")
+
 
 def ft_raise_exception():
     valid_temperature = "25"
@@ -26,6 +28,7 @@ def ft_raise_exception():
     test_temperature(hot_temperature)
     test_temperature(cold_temperature)
     print("All tests completed - program didn't crash!")
+
 
 if __name__ == "__main__":
     ft_raise_exception()
