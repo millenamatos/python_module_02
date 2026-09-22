@@ -3,11 +3,11 @@ class GardenError(Exception):
 
 
 class PlantError(GardenError):
-    def __init__(self, message="Unknown plant error"):
+    def __init__(self, message: str ="Unknown plant error"):
         super().__init__(message)
 
 
-def water_plant(plant_name) -> None:
+def water_plant(plant_name: str) -> None:
     if plant_name == plant_name.capitalize():
         print(f"Watering {plant_name}: [OK]")
     else:

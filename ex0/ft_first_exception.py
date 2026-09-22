@@ -1,17 +1,18 @@
-def input_temperature(temp_input):
-    return int(temp_input)
+def input_temperature(temp_str: str) -> int:
+    return int(temp_str)
 
 
-def test_temperature(temp_input):
+def test_temperature(temp_str: str) -> None:
     try:
-        print(f"Input data is '{temp_input}'")
-        temperature = input_temperature(temp_input)
-        print(f"Temperature is now {temperature}°C\n")
+        print(f"Input data is '{temp_str}'")
+        temperature = input_temperature(temp_str)
+        print(f"Temperature is now {temperature}°C")
     except ValueError as error:
-        print(error, "\n")
+        print(f"Caught input_temperature error: {error}")
+    print()
 
 
-def ft_first_exception():
+def ft_first_exception() -> None:
     valid_temperature = "25"
     invalid_temperature = "abc"
     print("=== Garden Temperature ===\n")
