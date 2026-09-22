@@ -32,7 +32,7 @@ def ft_raise_exception():
     test_temperature(invalid_temperature)
     test_temperature(hot_temperature)
     test_temperature(cold_temperature)
-    
+
     print("All tests completed - program didn't crash!")
 
 
