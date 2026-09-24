@@ -20,7 +20,7 @@ def test_temperature(temp_input: str) -> None:
         print(f"Caught input_temperature error: {error}\n")
 
 
-def ft_raise_exception():
+def ft_raise_exception() -> None:
     valid_temperature = "25"
     invalid_temperature = "abc"
     hot_temperature = "100"

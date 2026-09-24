@@ -4,9 +4,9 @@ def garden_operations(operation_number: int) -> None:
     elif operation_number == 1:
         10 / 0
     elif operation_number == 2:
-        open("non/existent/file")
+        open("/non/existent/file")
     elif operation_number == 3:
-        "abc" + 10
+        "abc" + 10  # type: ignore
     else:
         return
 
@@ -14,6 +14,7 @@ def garden_operations(operation_number: int) -> None:
 def test_error_types(operation_number: int) -> None:
     try:
         garden_operations(operation_number)
+        print("Operation completed successfully")
     except ValueError as error:
         print("Caught ValueError:", error)
     except ZeroDivisionError as error:
@@ -22,8 +23,6 @@ def test_error_types(operation_number: int) -> None:
         print("Caught FileNotFoundError:", error)
     except TypeError as error:
         print("Caught TypeError:", error)
-    if operation_number > 3:
-        print("Operation completed successfully")
 
 
 def ft_different_errors() -> None:
